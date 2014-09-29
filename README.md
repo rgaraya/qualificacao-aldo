@@ -1,0 +1,4 @@
+qualificacao-aldo
+=================
+
+Latex
