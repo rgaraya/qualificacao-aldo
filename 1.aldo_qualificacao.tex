@@ -1,0 +1,142 @@
+\documentclass[12pt,oneside,final]{book}
+
+%\usepackage[portuges,brazil]{babel}
+%\usepackage[latin1]{inputenc}
+
+%\usepackage[utf8]{inputenc}
+%\usepackage[brazilian]{babel}
+
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese,brazil]{babel}
+%*************************************
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{colortbl}
+\usepackage{cancel}
+\usepackage{bibunits}
+%\usepackage{natbib} % Estilos de referencias
+%\bibliographystyle{plain} % Ordena na forma alfavetica
+\bibliographystyle{ieeetr} % How do I order citations by appearance using BibTeX
+%*************************************
+\usepackage{indentfirst}
+\usepackage{ae}
+%\usepackage{harvard}
+\usepackage{amssymb,fancyhdr,fancybox,epsfig,psfrag,amsmath,tabularx}
+\usepackage[paperwidth=8.5in,paperheight=11in,hmargin={25mm,20mm},vmargin={20mm,20mm}]{geometry} %tamanho letter
+
+
+\usepackage[color]{showkeys}
+\definecolor{refkey}{rgb}{0.39,0.58,1}
+\definecolor{labeled}{rgb}{1,0,0}
+\usepackage[Lenny]{fncychap}
+\setlength{\headheight}{15pt}
+
+%=========================================== Headers =========================================
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter. \ #1}{ }}
+\renewcommand{\sectionmark}[1]{\markright{\thesection. \ #1}}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[LO]{\nouppercase{\leftmark}}
+\fancyhead[RO]{\thepage}
+
+\input{macros}
+
+\begin{document}
+\input{capa} % Capa1, Capa2 e Ficha Catalogr\'afica e Aprocacao
+
+%***************** SOLO PARA LA DISERTACAO (%%) ********
+
+%%\input{dedicatoria}
+
+%%\input{agradecimento}
+
+%%\input{epigrafe}
+
+%%\baselineskip 1.1 \baselineskip
+
+%%\input{resumo} (OPCIONAL para a QUALIFICACAO)
+
+%=========  lista de tabelas e figuras ============
+\listoffigures
+
+%%\listoftables  % Minha tesis nao tem nenhuma tabela
+
+%========  acronimos, simbolos e notaveis ========================
+%%\input{acro_notacao.tex}
+
+%======= ===========  sumario  ===========================
+\tableofcontents
+\pagestyle{fancy}
+
+%************************************************************************
+%************          INTRODUCAO GERAL (CAP 1)        ***************************
+%\begin{bibunit}[plain]
+    \include{cap1}
+
+    %\addcontentsline{toc}{section}{Referências do cap\'itulo 1}
+    %\renewcommand{\bibname}{Refer\^encias do cap\'itulo 1}
+    %\markboth{Bibliografia}{Refer\^encias do cap\'itulo 1}
+    %\putbib[meubib]
+%\end{bibunit}
+%************************************************************************
+%*********                 PRELIMINARES E DEFINIÇÕES (CAP 2)          ******************
+%\begin{bibunit}[plain]
+    \include{cap2}
+
+    %\addcontentsline{toc}{section}{Refer\^encias do cap\'itulo 2}
+    %\renewcommand{\bibname}{Refer\^encias do cap\'itulo 2}
+    %\markboth{Bibliografia}{Refer\^encias do cap\'itulo 2}
+    %\putbib[meubib]
+%\end{bibunit}
+
+%**************************************************************************
+%******* RESULTADOS PARCIAIS:  SEGUNDA CONTRIBUICAO (CAP 4) *****************
+
+%\begin{bibunit}[plain]
+   \include{cap3}
+
+ %%   \addcontentsline{toc}{section}{Refer\^encias do cap\'itulo 3}
+   %% \renewcommand{\bibname}{Refer\^encias do cap\'itulo 3}
+    %%\markboth{Bibliografia}{Refer\^encias do cap\'itulo 3}
+   %%\putbib[meubib]
+%\end{bibunit}
+%**************************************************************************
+%******* RESULTADOS PARCIAIS:  PRIMIEIRA CONTRIBUICAO (CAP 4) ****************
+
+%\begin{bibunit}[plain]
+  \include{cap4}
+
+    %\addcontentsline{toc}{section}{Refer\^encias do cap\'itulo 4}
+    %\renewcommand{\bibname}{Refer\^encias do cap\'itulo 4}
+    %\markboth{Bibliografia}{Refer\^encias do cap\'itulo 4}
+    %\putbib[meubib]
+%\end{bibunit}
+
+%*************************************************************************
+%*******  PLANO DE TRABALHO E CRONOGRAMA (CAP 5) **************************
+
+\include{cap5}
+
+%*************************************************************************
+%******************* CONCLUSOES PARCIAIS (CAP 6) ***************************
+
+\include{cap6}
+
+%============            Bibliografia ===============================
+
+\addcontentsline{toc}{chapter}{Bibliografia}
+\renewcommand{\bibname}{Bibliografia}
+\markboth{Bibliografia}{Bibliografia}
+
+%%\bibliographystyle{dcu}
+%%\bibliography{meubib}
+
+\bibliography{meubib}{}
+\bibliographystyle{plain}
+%\bibliographystyle{dcu}
+%************************       APENDICES  ***********************************
+
+%\appendix
+%\include{apendice_A}
+
+\end{document}

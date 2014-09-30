@@ -1,0 +1,59 @@
+\chapter{Apêndice: Solução da equação de onda}
+\label{Cap:apA}
+
+Para a validar que a expressão (\ref{e18}):
+
+ \begin{equation}\label{e18U}
+  \psi(\rho,z,t)= \exp[-{\rm i}\omega t]\sum\limits_{n=-\infty}^{\infty}R_n sinc[\sqrt{\frac{\omega^2}{c^2}\rho^2+(z\frac{\omega}{c}+\pi n)^2}]
+\end{equation}
+
+onde $K=2\omega/c$ e $R_n$ são os coeficientes de Fourier dados em (\ref{e17}) representa uma solução exata da equação de onda (\ref{equ2}):
+
+ \begin{equation}\label{equ2U}
+\left(\frac{\partial^2}{\partial {\rho}^2}  +  \frac{1}{\rho}\frac{\partial^2}{\partial {\rho}^2}  +    \frac{\partial^2}{\partial z^2}  -   \frac{1}{c^2}\frac{\partial^2}{\partial t^2}   \right)\psi(\rho,z, t) =0
+\end{equation}
+
+ substituímos (\ref{e18U}) em (\ref{equ2U}):
+
+\begin{eqnarray}
+\left( \frac{\partial^2}{\partial \rho^2}+\frac{1}{\rho}\frac{\partial}{\partial\rho}+  \frac{\partial^2}{\partial z^2} - \frac{1}{c^2}\frac{\partial^2}{\partial t^2}\right)\psi(\rho, z, t)  &=&0\nonumber\\
+ \frac{\partial^2}{\partial \rho^2}\psi(\rho, z, t)+\frac{1}{\rho}\frac{\partial}{\partial\rho}\psi(\rho, z, t)+  \frac{\partial^2}{\partial z^2}\psi(\rho, z, t) + \frac{\omega^2}{c^2}\psi(\rho, z, t)  &=&0 \label{d1}
+\end{eqnarray}
+Derivando temos:
+\begin{eqnarray}
+  \frac{\partial^2}{\partial \rho^2}\psi(\rho, z, t) &=&  \exp[-{\rm i}\omega t]\sum\limits_{n=-\infty}^{\infty}R_n  \left[\frac{\omega^4 }{c^4}\rho ^2 \left(\frac{3 \sin[h]}{h^5}-\frac{3 \cos[h]}{ h^4}-\frac{\sin[h]}{ h^3}\right)+\frac{\omega^2 }{c^2 }\left(\frac{\cos[h]}{h^2} \right. \right.\nonumber\\
+&& \left. \left. -\frac{\sin[h]}{h^3}\right) \right]\label{d2} \label{d2}\\
+\frac{1}{\rho}\frac{\partial}{\partial\rho}\psi(\rho, z, t) &=& \exp[-{\rm i}\omega t]\sum\limits_{n=-\infty}^{\infty}R_n\left [ \frac{\omega^2}{c^2 } \left(\frac{\cos[h]}{h^2}-\frac{\sin[h]}{h^3}\right) \right] \label{d3}\\
+ \frac{\partial^2}{\partial z^2} \psi (\rho, z, t)  &=&  \exp[-{\rm i}\omega t]\sum\limits_{n=-\infty}^{\infty}R_n\left[ \frac{\omega^2}{c^2 }\left(n \pi +\frac{\omega z}{c}\right)^2\left( \frac{3 \sin[h]}{h^5}-\frac{3\cos[h]}{h^4}-\frac{\sin[h]}{h^3}\right) \right.\nonumber \\
+&&+\left. \frac{\omega^2}{c^2} \left(\frac{\cos[h]}{h^2}-\frac{\sin[h]}{h^3}\right) \right] \label{d4}
+\end{eqnarray}
+onde
+\begin{equation}\label{d5}
+h= \sqrt{\frac{\omega^2}{c^2}\rho^2+(z\frac{\omega}{c}+\pi n)^2}
+\end{equation}
+de (\ref{d5}) usando $ (\pi n+z\frac{\omega}{c})^2 = h^2- \omega^2\rho^2/c^2$ em (\ref{d4}) temos:
+
+%\begin{eqnarray}
+\begin{multline}  \label{d6}
+\frac{\partial^2}{\partial z^2} \psi (\rho, z, t)  =  \exp[-{\rm i}\omega t]\sum\limits_{n=-\infty}^{\infty}R_n \left[ \frac{\omega^2}{c^2 }\left(   h^2- \rho^2\frac{\omega^2}{c^2} \right)\left( \frac{3 \sin[h]}{h^5}-\frac{3\cos[h]}{h^4}-\frac{\sin[h]}{h^3}\right) \right. \\
++\left. \frac{\omega^2}{c^2} \left(\frac{\cos[h]}{h^2}-\frac{\sin[h]}{h^3}\right) \right] \\
+=  \exp[-{\rm i}\omega t]\sum\limits_{n=-\infty}^{\infty}R_n  \left[ -\frac{\omega^4}{c^4}\rho^2\left( \frac{3 \sin[h]}{h^5}-\frac{3\cos[h]}{h^4}-\frac{\sin[h]}{h^3}\right) -2\frac{\omega^2}{c^2}\left( \frac{\cos[h]}{h^2}-\frac{ \sin[h]}{h^3}\right)\right. \\
+ \left. -\frac{\omega^2}{c^2}\left(\frac{\sin[h]}{h}\right) \right] \\
+=  \exp[-{\rm i}\omega t]\sum\limits_{n=-\infty}^{\infty}R_n  \left[ -\frac{\omega^4}{c^4}\rho^2\left( \frac{3 \sin[h]}{h^5}-\frac{3\cos[h]}{h^4}-\frac{\sin[h]}{h^3}\right) -2\frac{\omega^2}{c^2}\left( \frac{\cos[h]}{h^2}-\frac{ \sin[h]}{h^3}\right)\right] \\
+ -\frac{\omega^2}{c^2}\left(\exp[-{\rm i}\omega t]\sum\limits_{n=-\infty}^{\infty}R_n\frac{\sin[h]}{h}\right)\\
+=  \exp[-{\rm i}\omega t]\sum\limits_{n=-\infty}^{\infty}R_n  \left[ -\frac{\omega^4}{c^4}\rho^2\left( \frac{3 \sin[h]}{h^5}-\frac{3\cos[h]}{h^4}-\frac{\sin[h]}{h^3}\right) -2\frac{\omega^2}{c^2}\left( \frac{\cos[h]}{h^2}-\frac{ \sin[h]}{h^3}\right)\right] \\
+  -\frac{\omega^2}{c^2}\psi(\rho, z, t)
+%\end{eqnarray}
+\end{multline}
+
+Substituindo (\ref{d2}), (\ref{d3}) e (\ref{d6}) em (\ref{d1}) notamos que (\ref{e18}) é afetivamente uma solução exata da equação de onda (\ref{equ2}) com os coeficientes de Fourier $R_n$ dado por (\ref{e17}):
+
+\begin{equation}\label{e17U}
+  R_n=\frac{1}{K}\int_{-\omega/c}^{\omega/c} S(k_z)\exp[-{\rm i}\frac{2\pi}{K}n k_z]dk_z
+\end{equation}
+
+para o espectro:
+
+\begin{equation}\label{e16U}
+  S(k_{z})= \sum\limits_{n=-\infty}^{\infty}R_n \exp\left[{\rm i}\frac{2\pi}{K}n k_{z}\right]
+\end{equation}

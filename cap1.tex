@@ -1,14 +1,11 @@
-%\chapter*{Introdu\c{c}\~{a}o Geral}
-%\addcontentsline{toc}{chapter}{Introdu\c{c}\~{a}o Geral} 
-\pagenumbering{arabic}
 \chapter{Introdução Geral}
+\pagenumbering{arabic}
+
 Nesta seção apresentamos  uma revisão bibliográfica resumida, os objetivos e as justificativas  de nosso projeto.
 \section{Revisão bibliográfica resumida}
 Um feixe é uma solução monocromática da equação de onda que possui concentração transversal de campo. No caso escalar essas soluções são soluções da equação de onda e no caso vetorial essas soluções são soluções das equações de Maxwell.\\
 Um feixe óptico pode ser construído a partir de superposições de ondas planas que se propagam em diferentes direções, sendo que o feixe óptico mais comum é o gaussiano.\\
-Na atualidade o estudo de feixes ópticos vem apresentando uma grande demanda (teórica e prática), atingindo as mais diversas áreas, como em pinças ópticas \cite{Lya:38}\cite{Lya:39}\cite{Lya:40}, guiamento óptico de átomos \cite{Lya:41}\cite{Lya:42}, litografia óptica \cite{Lya:38}, imagens ópticas \cite{Lya:43}, alinhamento óptico a longa distância \cite{Lya:44}, comunicações ópticas no espaço livre \cite{Lya:45}, aceleração óptica de partículas carregadas, etc. Os novos estudos também abarcam as construções de novos tipos feixes, os quais possuem propriedades muito mais interessantes que o já conhecido feixe gaussiano, como por exemplos os feixes de bessel \cite{Lya:6}\cite{Lya:29}, feixes de Mathieu \cite{Lya:49}, feixes de Airy \cite{Lya:50}, Frozen Waves \cite{Lya:46}\cite{Lya:47}\cite{Lya:48}, etc.\\
-Soluções analíticas exatas da equação de onda descrevendo feixes são raras. Na maioria das vezes as soluções da equação de onda descrevendo feixes são dadas para o regime de propagação paraxial ( usando aproximações paraxiais)\cite{Lya:3}\cite{Lya:5}\cite{Lya:12}\cite{Lya:26}\cite{Lya:4} ou obtidas através de métodos numéricos. Porém existem situações de grande importância (teórica e prática) que ocorrem no regime não paraxial e que, por tanto não podem ser descritas por aproximações usuais.\\
-Vários dos métodos analíticos já foram propostos para a descrição de feixes não paraxiais, tanto para casos escalares \cite{Lya:9}\cite{Lya:14}\cite{Lya:10} como para casos vetoriais \cite{Lya:5}\cite{Lya:15}\cite{Lya:13}\cite{Lya:25}\cite{Lya:22}\cite{Lya:1}\cite{Lya:7}\cite{Lya:37}, porém na maioria das vezes esses métodos são voltados para feixes específicos \cite{Lya:11}\cite{Lya:13}\cite{Lya:16}\cite{Lya:17}\cite{Lya:20} ou são consideravelmente complexos do ponto de vista matem\'atico \cite{Lya:11}. Neste sentido o presente projeto tem com finalidade usar o método proposto em \cite{Lya:2}, de fácil manejo matemático, para fornecer um método capaz de proporcionar qualquer tipo de feixe escalar e vetorial não paraxial (e paraxial) como solução analítica exata da equação de onda.
+Na atualidade o estudo de feixes ópticos vem apresentando uma grande demanda (teórica e prática), atingindo as mais diversas áreas, como em pinças ópticas 
 %****************************************************************************************************************
 %****************************************************************************************************************
 \section{Objetivos e justificativas}
@@ -16,12 +13,34 @@ Este trabalho tem por objetivo geral desenvolver um método teórico capaz de fo
 Este trabalho tem como objetivos:
 \begin{itemize}
 \item Adquirir conhecimento dos feixes escalares propagantes não paraxiais com simetria azimutal construídos como superposições de feixes de Bessel de ordem zero através de uma integração na componente longitudinal do vetor de onda $k_z$ com uma dada função espectral $S(k_z)$.
-\item Usar o método matemático proposto em \cite{Lya:2} para obter feixes escalares propagantes com simetria azimutal paraxiais e não paraxiais a partir de funções de espectro paraxial e não paraxial. Analisar espectros de tipo exponencial, quadrado e gaussiano. Aplicar o método matemático proposto em (\cite{Lya:2}) para construir feixes escalares não propagantes sim simetria azimutal. 
+\item Usar o método matemático proposto em  para obter feixes escalares propagantes com simetria azimutal paraxiais e não paraxiais a partir de funções de espectro paraxial e não paraxial. Analisar espectros de tipo exponencial, quadrado e gaussiano. Aplicar o método matemático proposto em  para construir feixes escalares não propagantes sim simetria azimutal. 
 \item Propor métodos matemáticos para a construção de feixes vetoriais propagantes não paraxiais simétricos como soluções analíticas exatas das equações de Maxwell. Estudo das polarizações dos feixes vetoriais em coordenadas cartesianas e cilíndricas.
 \end{itemize}  
 Dentro das justificativas podemos destacar que o estudo de feixes ópticos nos últimos anos vem apresentando uma grande demanda (teórica e prática) principalmente na construção de novos tipos de feixes, os quais possuem propriedades muito mais interessantes que os já conhecidos feixes gaussianos, como as aplicações em fibra óptica, guiamento óptico de átomos, alinhamento óptico, aplicações médicas, comunicações ópticas no espaço livre, aplicações em óptica não linear, etc. O estudo da propagação de feixes é realizado, em geral, a partir das soluções da equação de onda. Na atualidade soluções analíticas exatas da equação de onda descrevendo feixes são muito raras, por isso muita atenção é dada ao regime de propagação paraxial na obtenção de soluções analíticas e também numéricas.\\
 Porém obter um método que forneça soluções analíticas exatas da equação de onda no regime não paraxial é de grande importância, pois poderemos tratar situações que não podem ser descritas por aproximações usuais.\\
-Dentro das justificativas podemos destacar também que nosso método distingue-se dos outros métodos em dois principais características: A primeira é que nosso método pode ser aplicado para qualquer tipo de feixe e não s\'o para um determinado feixe, como em \cite{Lya:13}\cite{Lya:22}\cite{Lya:9}\cite{Lya:4}\cite{Lya:11} e a segunda característica é que nosso feixe não é complexo do ponto de vista matemático, como em \cite{Lya:4}\cite{Lya:19}\cite{Lya:23}\cite{Lya:14}\cite{Lya:7}\cite{Lya:15}.
+Dentro das justificativas podemos destacar também que nosso método \cite{Stratton:02} distingue-se dos outros métodos em dois principais características: A primeira é que nosso método pode ser aplicado para qualquer tipo de feixe e não s\'o para um determinado feixe, como em \cite{Stratton:02, Jackson:03,Figueroa:05,Sochacki:1}.
+  
+%***************************************************************************************************************  
+
+
+Nesta seção apresentamos  uma revisão bibliográfica resumida, os objetivos e as justificativas  de nosso projeto.
+\section{Revisão bibliográfica resumida}
+Um feixe é uma solução monocromática da equação de onda que possui concentração transversal de campo. No caso escalar essas soluções são soluções da equação de onda e no caso vetorial essas soluções são soluções das equações de Maxwell.\\
+Um feixe óptico pode ser construído a partir de superposições de ondas planas que se propagam em diferentes direções, sendo que o feixe óptico mais comum é o gaussiano.\\
+Na atualidade o estudo de feixes ópticos vem apresentando uma grande demanda (teórica e 
+%****************************************************************************************************************
+%****************************************************************************************************************
+\section{Objetivos e justificativas}
+Este trabalho tem por objetivo geral desenvolver um método teórico capaz de fornecer feixes escalares e vetoriais propagantes não paraxiais com simetria azimutal como soluções analíticas exatas da equação de onda e das equações de Maxwell respectivamente. Feixes escalares propagantes não paraxiais sem simetria azimutal também são estudados como soluções analíticas exatas da equação de onda.\\
+Este trabalho tem como objetivos:
+\begin{itemize}
+\item Adquirir conhecimento dos feixes escalares propagantes não paraxiais com simetria azimutal construídos como superposições de feixes de Bessel de ordem zero através de uma integração na componente longitudinal do vetor de onda $k_z$ com uma dada função espectral $S(k_z)$.
+\item Usar o método matemático proposto em  para obter feixes escalares propagantes com simetria azimutal paraxiais e não paraxiais a partir de funções de espectro paraxial e não paraxial. Analisar espectros de tipo exponencial, quadrado e gaussiano. Aplicar o método matemático proposto em (\cite{Lya:2}) para construir feixes escalares não propagantes sim simetria azimutal. 
+\item Propor métodos matemáticos para a construção de feixes vetoriais propagantes não paraxiais simétricos como soluções analíticas exatas das equações de Maxwell. Estudo das polarizações dos feixes vetoriais em coordenadas cartesianas e cilíndricas.
+\end{itemize}  
+Dentro das justificativas podemos destacar que o estudo de feixes ópticos nos últimos anos vem apresentando uma grande demanda (teórica e prática) principalmente na construção de novos tipos de feixes, os quais possuem propriedades muito mais interessantes que os já conhecidos feixes gaussianos, como as aplicações em fibra óptica, guiamento óptico de átomos, alinhamento óptico, aplicações médicas, comunicações ópticas no espaço livre, aplicações em óptica não linear, etc. O estudo da propagação de feixes é realizado, em geral, a partir das soluções da equação de onda. Na atualidade soluções analíticas exatas da equação de onda descrevendo feixes são muito raras, por isso muita atenção é dada ao regime de propagação paraxial na obtenção de soluções analíticas e também numéricas.\\
+Porém obter um método que forneça soluções analíticas exatas da equação de onda no regime não paraxial é de grande importância, pois poderemos tratar situações que não podem ser descritas por aproximações usuais.\\
+Dentro das justificativas podemos destacar também que nosso método distingue-se dos outros métodos em dois principais características: 
   
 %***************************************************************************************************************  
 
