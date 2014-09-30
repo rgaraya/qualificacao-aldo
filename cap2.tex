@@ -1,0 +1,157 @@
+\chapter{Preliminares e Defini\c{c}\~{o}es}
+\section{Feixes puramente propagantes com simetria azimutal}
+Um feixe de Bessel com simetria axial \'e escrito como:
+ \begin{equation}\label{eqA1}
+    \psi(\rho,z,t)= J_0(k_\rho\rho)\exp[{-\rm i}k_z]\exp[{-\rm i}\omega t]
+\end{equation}
+com
+\begin{equation}\label{eqA2}
+    \frac{\omega^2}{c^2}= k^2_{\rho} + k^2_{z}
+\end{equation}
+onde $c$, $\omega$, $k_{\rho}$, $k_{z}$ são a velocidade da luz no vácuo, a frequência angular, o número de onda transversal e longitudinal, respetivamente.\\
+Um feixe com simetria azimutal pode ser escrito como  uma superposição de feixes de Bessel de ordem zero ($J_0$) através de uma integração na componente transversal do vetor de onda $ k_{{\rho}} $ com uma função espectral $S_{\pm}^{'}(k_{\rho})$ %\cite{Lya:92}.
+\begin{equation}\label{eqA3}
+\psi(\rho,z,t)=
+\int_{0}^{\omega/c}J_0(k_{\rho}\rho)\exp[\pm{\rm i}z\sqrt{\omega^2/c^2-k^{2}_{\rho}}]
+\exp[{-\rm i}\omega t]S_{\pm}^{'}(k_{\rho})k_{\rho}dk_{\rho}d\omega
+\end{equation}
+ onde consideraremos $0\leq k_z\leq \omega /c$ para evitar componentes evanescentes.\\
+Mediante o vínculo (\ref{eqA2}), podemos obter os feixes dados por (\ref{eqA3}) através de uma superposição em $k_z$:
+\begin{equation}\label{eqA4}
+\psi(\rho,z,t)=
+\exp[{-\rm i}\omega t]\int_{-\omega/c}^{\omega/c}J_0(\rho\sqrt{\omega^2/c^2-k^{2}_{z}})\exp[{\rm i}k_z z]S(k_{z})dk_{z}
+\end{equation} 
+A superposição dada em (\ref{eqA4}) possui componentes propagantes e contra propagantes.
+%***********************************************************************************************************************
+\subsection{Feixes paraxiais e n\~ao paraxiais}
+Na solução integral (\ref{eqA4}) o espectro de $S(k_z)$ define o tipo de feixe resultante. Feixes paraxiais são aqueles onde os espectros $S(k_z)$ são concentrados ao redor de $k_z = \omega /c$, com $\Delta k_z \ll \omega /c$. Algumas soluções de feixes paraxiais (como a tradicional solução do feixe gaussiano) podem ser obtidas analiticamente através da aproximação paraxial  \cite{Lya:3} \cite{Lya:4}\cite{Lya:12}, nesse caso o uso da solução (\ref{eqA3}) é mais indicada.\\
+Feixes n\~ao paraxiais (puramente propagantes) s\~ao caracterizados por espectros de $S(k_z)$ de grande largura de banda; ou mesmo estreitos, por\'em concentrados em valores de $\bar{k}_z$ bem afastados do valor $k_z = \omega /c$.\\
+Obter soluções analíticas exatas para feixes não paraxiais \'e um desafio devido à complexidade da integral (\ref{eqA4}). A seguir iremos expor o método capaz de solucionar (\ref{eqA4}) para qualquer espectro $S(k_z)$ e, portanto, capaz de fornecer soluções analíticas exatas descrevendo feixes não paraxiais (e também paraxiais) puramente propagantes. 
+%***********************************************************************************************************************
+\section{Metodologia matem\'atica para a construção de feixes escalares } 	
+A demostração da metodologia matemática proposta, capaz de fornecer soluções analíticas exatas da equação de onda para qualquer espectro $S(k_z)$, \'e dividida em três passos. 
+\subsection{Passo 1}
+Primeiro consideramos um espectro constante:
+\begin{equation}\label{eqA5}
+    S(k_{z})=\frac{1}{2}\frac{c}{\omega}
+\end{equation}
+O fato de escolhemos o espectro constante igual ao valor $c/2\omega$ deve-se apenas a motivos de dimensionalidade e  motivos estéticos na solução final. Substituindo (\ref{eqA5}) em (\ref{eqA4}) obtém$-$se:
+\begin{equation}\label{eqA6}
+\psi(\rho,z,t)=\exp[-{\rm i}\omega t]\int_{-\omega/c}^{\omega/c}J_0(\rho\sqrt{\omega^2/c^2-k_{z}^2})\exp[{\rm i}k_{z}z]
+\frac{1}{2}\frac{c}{\omega}dk_{z}
+\end{equation}
+Fazemos a mudança de variável $k_{z}=\frac{\omega}{c}s$, então $dk_{z}=\frac{\omega}{c}ds$. Substituindo em (\ref{eqA6})
+\begin{equation}\label{eqA7}
+\ \psi(\rho,z,t)=\frac{1}{2}\exp[-{\rm i}\omega t]\int_{-1}^{1}J_0(\frac{\omega}{c}\rho\sqrt{1-s^2})
+\exp[{\rm i}\frac{\omega}{c}zs]ds
+\end{equation}
+A integral pode ser escrita como:
+\begin{equation}\label{eqA8}
+    \psi(\rho,z,t)=\frac{1}{2}\exp[-{\rm i}\omega t][\int_{-1}^{1}J_0(\frac{\omega}{c}\rho\sqrt{1-s^2})\cos(\frac{\omega}{c}zs)ds
++{\rm i}\int_{-1}^{1}J_0(\frac{\omega}{c}\rho\sqrt{1-s^2})\sin(\frac{\omega}{c}zs)ds ]
+\end{equation}
+A segunda integral se anula pois o integrando é uma função ímpar e o intervalo de integração é simétrico. Assim:
+\begin{equation}\label{eqA9}
+    \psi(\rho,z,t)=\exp[-{\rm i}\omega t]\int_{0}^{1}J_0(\frac{\omega}{c}\rho\sqrt{1-s^2})
+\cos[(\frac{\omega}{c}z)s]ds
+\end{equation}
+Usando as tabelas de integrais de \cite{Lya:23}, obtemos: 
+\begin{equation}\label{eqA10}
+ \psi(\rho,z,t)=\exp[-{\rm i}\omega t]\frac{\sin(\sqrt{(\frac{\omega}{c}\rho)^2+(\frac{\omega}{c}z)^2})}{\sqrt{(\frac{\omega}{c}\rho)^2+(\frac{\omega}{c}z)^2}} 
+=\exp[-{\rm i}\omega t]sinc[\sqrt{\frac{\omega^2}{c^2}\rho^2+\frac{\omega^2}{c^2}z^2}]
+\end{equation}
+A solução (\ref{eqA10}) é altamente não paraxial, obtida a partir de um espectro não paraxial, pela superposição de feixes de Bessel propagantes e contra-propagantes de mesma amplitude. A solução (\ref{eqA10}) do espectro analisado n\~ao possui interesse prático devido à forte presença de componentes contra-propagantes (feixes de Bessel propagando-se na direção negativa). 
+%*******************************************************
+\subsection{Passo 2}
+Agora consideramos um segundo tipo de espectro $S(k_z)$:
+\begin{equation}\label{eqA11}
+    S(k_{z})=\frac{1}{2}\frac{c}{\omega}\exp[{-\rm i}\frac{2\pi n}{K} k_z]
+\end{equation}
+onde 
+\begin{equation}\label{eqA12}
+    K=k_{z max}-k_{z min} = \frac{\omega}{c}-(-\frac{\omega}{c})=2\frac{\omega}{c}.
+\end{equation}
+Substituindo (\ref{eqA11}) em (\ref{eqA4})
+\begin{equation}\label{eqA13}
+  \psi(\rho,z,t)=\frac{1}{2}\frac{c}{\omega}\exp[-{\rm i}\omega t]\int_{-\omega/c}^{\omega/c}J_0(\rho\sqrt{\frac{\omega^2}{c^2}-k_{z}^2}) 
+\exp[{\rm i}(z+\frac{2\pi n }{K})k_{z}]dk_{z}
+\end{equation}
+e fazendo novamente a mudança de variável $k_z=\frac{\omega}{c}s$ 
+\begin{equation}\label{eqA14}
+   \psi(\rho,z,t)=\frac{1}{2}\exp[-{\rm i}\omega t]\int_{-1}^{1}J_0(\frac{\omega}{c}\rho\sqrt{1-s^2})
+\exp[{\rm i}(z\frac{\omega}{c}+\frac{2\pi n }{K}\frac{\omega}{c})s]ds) 
+\end{equation}
+onde de (\ref{eqA12}), temos:
+\begin{equation}\label{eqA15}
+  \frac{2\pi n}{K}\frac{\omega}{c}=\frac{2\pi n}{2\omega/c}\frac{\omega}{c}= \pi n
+\end{equation}
+e portanto (\ref{eqA14}):
+\begin{equation}\label{eqA16}
+   \psi(\rho,z,t)=\frac{1}{2}\exp[-{\rm i}\omega t]\int_{-1}^{1}J_0(\frac{\omega}{c}\rho\sqrt{1-s^2})
+\exp[{\rm i}(z\frac{\omega}{c}+\pi n)s]ds). 
+\end{equation}
+Usando o resultado (\ref{eqA10}) obtemos
+\begin{equation}\label{eqA17}
+  \psi(\rho,z,t)=\exp[-{\rm i}\omega t]sinc[\sqrt{\frac{\omega^2}{c^2}\rho^2+(z\frac{\omega}{c}+\pi n)^2}] 
+\end{equation}
+\subsection{Passo 3}
+No passo final, reparamos que as soluções obtidas em (\ref{eqA4}) provêm do calculo de uma integral em $-\omega/c\leq k_z\leq\omega/c$. Isso significa que o espectro $S(k_z)$ encontra-se definido nesse intervalo finito, e pode portanto ser escrito como uma série de Fourier:
+\begin{equation}\label{eqA18}
+  S(k_{z})= \sum\limits_{n=-\infty}^{\infty}R_n \exp[{\rm i}\frac{2\pi n}{K}k_{z}] 
+\end{equation}
+onde $K=2\omega/c$, para $-\omega/c\leq k_z\leq\omega/c$ e os coeficientes de Fourier são dados por:
+\begin{equation}\label{eqA19}
+  R_n=\frac{1}{K}\int_{-\omega/c}^{\omega/c} S(k_z)\exp[-{\rm i}\frac{2\pi}{K}n k_z]dk_z
+\end{equation}
+Dessa forma, usando (\ref{eqA16}) obtemos a solução exata (\ref{eqA4}) para qualquer espectro, dada por:
+\begin{equation}\label{eqA20}
+  \psi(\rho,z,t)= \exp[-{\rm i}\omega t]\sum\limits_{n=-\infty}^{\infty}R_n sinc[\sqrt{\frac{\omega^2}{c^2}\rho^2+(z\frac{\omega}{c}+\pi n)^2}]  
+\end{equation}
+com $R_n$ dado por (\ref{eqA19}).\\
+Portanto, nesse método, o problema se reduz ao cálculo dos coeficientes de Fourier $R_n$ de $S(k_z)$ usando (\ref{eqA19}).\\
+O feixe dado em (\ref{eqA20}) com (\ref{eqA19}) é uma solução exata da equação de onda, válida para qualquer espectro $S(k_z)$, com $-\omega/c\leq k_z\leq\omega/c$. Essa formula\c{c}\~ao interessante pode fornece feixes n\~ao paraxiais de forma exata.\\
+Também \'e interessante notar que a obtenção dos coeficientes de Fourier $R_n$ pode ser feita mediante  qualquer aproximação cabível, e ainda assim (\ref{eqA20}) será uma solução exata da equação de onda. Obviamente, n\~ao consideramos infinitos termos em (\ref{eqA20}). Consideraremos um número finito de termos (com o somatório indo de -N até N), tanto em (\ref{eqA19}) quanto em (\ref{eqA20}), sendo que esse número deve permitir uma boa representa\c{c}\~ao de $S(k_z)$ através da série de Fourier. 
+%***********************************************************************************************************************
+\section{Feixes escalares puramente propagantes sem simetria azimutal}
+Seja $\psi(\rho,\phi,z,t)$ solução da equação de onda, porém $\frac{\partial}{\partial x}\psi$ e $\frac{\partial}{\partial y}\psi$ também são soluções da equação de onda. Aplicando a regra da cadeia temos:
+\begin{eqnarray}
+  \frac{\partial}{\partial x}\psi& = &\frac{\partial\psi}{\partial \rho}\frac{\partial\rho}{\partial x}+\frac{\partial\psi}{\partial \phi}\frac{\partial\phi}{\partial x}  \label{eq4a}\\
+      \frac{\partial}{\partial y}\psi& = &\frac{\partial\psi}{\partial \rho}\frac{\partial\rho}{\partial y}+\frac{\partial\psi}{\partial \phi}\frac{\partial\phi}{\partial y} \label{eq4b}
+\end{eqnarray}
+para simplificar (\ref{eq4a}) e (\ref{eq4b}) lembramos que $\rho=\sqrt{x^2+y^2}$ e $\phi=\arctan(y/x)$ e fazendo as respetivas derivadas obtemos:
+\begin{eqnarray}
+  \frac{\partial}{\partial x}\psi& = &\frac{\partial\psi}{\partial \rho}\cos[\phi]-\frac{1}{\rho}\frac{\partial\psi}{\partial \phi}\sin[\phi]  \label{eq5a}\\
+      \frac{\partial}{\partial y}\psi& = &\frac{\partial\psi}{\partial \rho}\sin[\phi]+\frac{1}{\rho}\frac{\partial\psi}{\partial \phi}\cos[\phi] \label{eq5b}
+\end{eqnarray}
+Somando (\ref{eq5a}) $+$ {\rm i}(\ref{eq5b}) e agrupando, obtemos uma nova solu\c{c}\~ao $\bar{\psi}$, a qual continua sendo solução da equação de onda:
+\begin{eqnarray}  
+    \bar{\psi}(\rho,\phi,z,t)&=&\left( \cos[\phi]+{\rm i}\sin[\phi]\right)\left( \frac{\partial}{\partial \rho}\psi + \frac{{\rm i}}{\rho}\frac{\partial}{\partial\phi}\psi \right)\nonumber\\
+    \bar{\psi}(\rho,\phi,z,t)&=&\exp[{\rm i}\phi]\left( \frac{\partial}{\partial \rho}\psi + \frac{{\rm i}}{\rho}\frac{\partial}{\partial\phi}\psi \right)\label{eq6}
+\end{eqnarray}
+Seja $\psi$ igual a solução da equação de onda do tipo Bessel de ordem zero (\ref{eqA1}):
+\begin{equation}\label{eq7}
+\psi =J_0(k_{\rho}\rho)\exp[{\rm i}k_z z]\exp[{-\rm i}\omega t]
+\end{equation}
+substituindo (\ref{eq7}) em (\ref{eq6}) temos uma nova solução dependente de $\phi$, porém sem simetria azimutal:
+\begin{equation}\label{eq8}
+\bar{\psi} =-k_{\rho}J_1(k_{\rho}\rho)\exp[{\rm i}\phi]\exp[{\rm i}k_z z]\exp[{-\rm i}\omega t]
+\end{equation}
+Comparando (\ref{eq7}) e (\ref{eq8}), notamos que aplicando (\ref{eq7}) em (\ref{eq6}) $\nu -$vezes, obtemos uma nova solução da equação de onda dependente do $\phi$ através de $\nu$:
+\begin{equation}\label{eq9}
+\bar{\psi}_{\nu}(\rho,\phi,z,t) =(-k_{\rho})^{\nu}J_{\nu}(k_{\rho}\rho)\exp[{\rm i}\nu\phi]\exp[{\rm i}k_z z]\exp[{-\rm i}\omega t]
+\end{equation}
+Agora supomos $\psi$ igual aos feixes expressados mediante superposição em $k_z$ dados em (\ref{eqA4}). Aplicando indução no dois lados $\nu -$vezes em (\ref{eqA4}) e usando (\ref{eq9}) obtemos a nova solução $\bar{\psi}_{\nu}(\rho,\phi,z,t)$. Onde reparamos que os feixes resultantes s\~ao de ordem maior (para $\nu \neq 0$):
+\begin{equation}\label{eq10}
+\bar{\psi}_{\nu}(\rho,\phi,z,t) =\exp[{-\rm i}\omega t]\int^{\omega/c}_{-\omega/c}J_{\nu}(k_{\rho}\rho)\exp[{\rm i}\nu\phi]\exp[{\rm i}k_z z]S(k_z)(-k_{\rho})^{\nu} dk_z
+\end{equation}
+Em (\ref{eq10}) redefinimos o espectro $S^{'}(k_z)=S(k_z)(-k_{\rho})^{\nu}$ e obtemos um novo feixe depende do $\phi$:
+\begin{equation}\label{eq11}
+\bar{\psi}_{\nu}(\rho,\phi,z,t) =\exp[{-\rm i}\omega t]\int^{\omega/c}_{-\omega/c}J_{\nu}(k_{\rho}\rho)\exp[{\rm i}\nu\phi]\exp[{\rm i}k_z z]S^{'}(k_z) dk_z
+\end{equation}
+Na prática nós não vamos usar(\ref{eq11}) para obter as soluções $\bar{\psi}_{\nu}(\rho,\phi,z,t)$, sino que nós vamos usar:
+\begin{equation}\label{eq12}
+\bar{\psi}_{\nu}(\rho,\phi,z,t) = \left\{ \exp[{\rm i}\phi] \left[\frac{\partial}{\partial\rho}+\frac{\rm i}{\rho}\frac{\partial}{\partial\phi} \right]\right\}^{\nu}\psi
+\end{equation}
+onde $\psi$ é dado por (\ref{eqA20}) e $\exp[{\rm i}\phi] \left[\frac{\partial}{\partial\rho}+\frac{\rm i}{\rho}\frac{\partial}{\partial\phi} \right]$ é usado como um operador.
+ 
+%*************************************************************************************************************************
